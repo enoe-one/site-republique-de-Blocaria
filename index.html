@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>site-republique de blocaria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: url('index.png') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .blocaria {
+      display: block;
+      margin-top: 30px; /* augmenté pour descendre le mot */
+      color: #D4AF37; /* doré plus foncé */
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 60px;
+      text-shadow: 0 0 10px #CFAF47, 0 0 20px #8B7500;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(90deg, #007BFF, #0056b3);
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1.5s ease-out 0.5s forwards;
+    }
+
+    .button:hover {
+      background: linear-gradient(90deg, #0056b3, #003d80);
+      box-shadow: 0 0 25px rgba(0, 123, 255, 1);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bienvenue sur le site de la république de <span class="blocaria">BLOCARIA</span></h1>
+  <a href="ind.html" class="button">Continuer</a>
+
+</body>
+</html>

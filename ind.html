@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>République de Blocaria - Site Officiel</title>
+    <meta name="description" content="Bienvenue sur la République de Blocaria">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        /* Corps de la page */
+        body {
+            font-family: 'MedievalSharp', cursive;
+            margin: 0;
+            padding: 0;
+            color: #f2e2b3;
+            background: url('Cite-des-elements-1.png') no-repeat center center fixed;
+            background-size: cover;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        /* En-tête avec logo et titre */
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 5px solid #9c6a3c;
+            margin-bottom: 40px;
+        }
+
+            header img {
+                width: 150px;
+                margin-bottom: 20px;
+            }
+
+            header h1 {
+                font-size: 3.5em;
+                margin: 0;
+                color: #9c6a3c;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            }
+
+        /* Menu de navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            border-top: 2px solid #9c6a3c;
+        }
+
+            nav a {
+                color: #f2e2b3;
+                text-decoration: none;
+                margin: 0 25px;
+                font-size: 1.3em;
+                text-transform: uppercase;
+            }
+
+                nav a:hover {
+                    color: #9c6a3c;
+                    text-decoration: underline;
+                }
+
+        /* Section principale avec introduction */
+        .container {
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 15px;
+            border: 2px solid #9c6a3c;
+        }
+
+            .container h2 {
+                font-size: 2.5em;
+                color: #9c6a3c;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .container p {
+                font-size: 18px;
+                line-height: 1.8;
+                text-align: justify;
+                margin-bottom: 20px;
+                padding: 0 20px;
+            }
+
+            /* Style pour les titres et le discours */
+            .container h2, .container p {
+                color: #f2e2b3;
+            }
+
+                .container p strong {
+                    color: #9c6a3c;
+                }
+
+        /* Section de l'engagement */
+        hr {
+            border: 0;
+            height: 2px;
+            background: #9c6a3c;
+            margin: 40px 0;
+        }
+
+        /* Boutons d'action */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #9c6a3c;
+            color: #f2e2b3;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+            .btn:hover {
+                background: #7a4e2f;
+            }
+
+        /* Style pour le footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #f2e2b3;
+        }
+    </style>
+    <script>
+        // Code JavaScript pour garantir un défilement fluide sur tous les navigateurs
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="drapeau_V-removebg-preview.png" alt="Drapeau de Blocaria">
+        <h1>République de Blocaria</h1>
+    </header>
+
+    <nav>
+        <!-- Ajoute les liens de navigation ici, par exemple : -->
+        <a href="activité.html">lieu important</a>
+        <a href="site patate.html">calculateur de salaire</a>
+        <a href="JUSTICE.html">justice de blocaria</a>
+    </nav>
+
+    <div class="container" id="qui-sommes-nous">
+        <h2>Bienvenue, cher voyageur,</h2>
+
+        <p>
+            Tu pénètres aujourd’hui sur les terres de <strong>Blocaria</strong>, <em>puissante cité</em> bâtie sur la sagesse des anciens et la force de ses citoyens.
+            <br><br>
+            Ici, chaque pierre, chaque rue, chaque souffle raconte une histoire de grandeur.
+            <br><br>
+            Tu trouveras repos à l’<strong>auberge</strong>, refuge chaleureux pour les âmes fatiguées. Tu découvriras le <strong>sénat</strong>, haut lieu des débats où les lois de notre glorieuse <strong>République</strong> prennent vie, guidées par la voix du peuple à travers des <strong>élections</strong> libres et justes.
+            <br><br>
+            Nos citoyens, fiers et unis, contribuent au bien commun par l’<strong>impôt</strong>, garant de notre <strong>protection</strong>, de notre <strong>puissance économique</strong> et de notre <strong>force militaire</strong>, que nul ennemi n’ose défier.
+            <br><br>
+            À la <strong>mairie</strong>, les décisions du quotidien sont prises avec justice et équité. Nos <strong>restaurants</strong> t’ouvriront leurs portes pour festoyer à l’honneur de Blocaria.
+            <br><br>
+            La <strong>diplomatie</strong> y est un art raffiné, les <strong>lois</strong> y sont claires, et les <strong>sanctions</strong> justes mais fermes.
+            <br><br>
+            Notre <strong>aéroport</strong> et notre <strong>port</strong> accueillent les voyageurs venus des quatre coins du monde.
+            <br><br>
+            Et lorsque tu lèveras les yeux, noble visiteur, tu verras s’élever notre monument le plus sacré : le <strong>château</strong>, symbole éternel de notre histoire, de notre force et de notre honneur.
+            <br><br>
+            <em>Tu es désormais au cœur de la République de Blocaria.</em>
+        </p>
+    </div>
+
+    <hr>
+
+    <div class="container" id="engagement">
+        <h2>S'engager</h2>
+        <p>
+            Vous voudriez entrer dans la république ? C'est simple, vous avez juste à en parler à un de nos sénateurs.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfbovxnCzjO7E0RzcCuvFphaKtlSL1OcCAcild1FBFEd7JWSg/viewform?usp=header" class="btn">Contactez-nous</a>
+    </div>
+
+</body>
+</html>

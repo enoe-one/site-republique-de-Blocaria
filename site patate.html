@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Salaire - République</title>
+    <style>
+        /* Corps de la page */
+        body {
+            font-family: 'MedievalSharp', cursive;
+            margin: 0;
+            padding: 0;
+            color: #f2e2b3;
+            background: url('Cite-des-elements-1.png') no-repeat center center fixed;
+            background-size: cover;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #9c6a3c;
+            margin-bottom: 40px;
+        }
+
+            header h1 {
+                font-size: 3.5em;
+                color: #9c6a3c;
+                margin: 0;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            border: 2px solid #9c6a3c;
+        }
+
+        h2 {
+            color: #9c6a3c;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #f2e2b3;
+        }
+
+        /* Menu de navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            border-top: 2px solid #9c6a3c;
+        }
+
+            nav a {
+                color: #f2e2b3;
+                text-decoration: none;
+                margin: 0 20px;
+                font-size: 1.2em;
+                text-transform: uppercase;
+            }
+
+                nav a:hover {
+                    color: #9c6a3c;
+                    text-decoration: underline;
+                }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .checkbox {
+            margin-top: 20px;
+        }
+
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #3e3e3e;
+            border-left: 5px solid #9c6a3c;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 25px;
+            background-color: #9c6a3c;
+            color: #f2e2b3;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+            button:hover {
+                background-color: #7a4e2f;
+            }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>République de Blocaria - Calculateur de Salaire en Patates</h1>
+    </header>
+    <nav>
+        <a href="ind.html">page principal</a>
+        <a href="activité.html">lieu important</a>
+        <a href="JUSTICE.html">justice de blocaria</a>
+    </nav>
+    <div class="container">
+        <h2>Déclarez vos ressources :</h2>
+
+        <label>Nombre de Diamants :</label>
+        <input type="number" id="diamants" min="0">
+
+        <label>Nombre de Netherite :</label>
+        <input type="number" id="netherite" min="0">
+
+        <label>Nombre d'Émeraudes :</label>
+        <input type="number" id="emeraudes" min="0">
+
+        <label>Nombre de Lingots de Fer :</label>
+        <input type="number" id="fer" min="0">
+
+        <label>Nombre de Lingots d'Or :</label>
+        <input type="number" id="or" min="0">
+
+        <div class="checkbox">
+            <input type="radio" name="statut" id="fonctionnaire" value="fonctionnaire" checked>
+            <label for="fonctionnaire">Fonctionnaire de la République</label><br>
+            <input type="radio" name="statut" id="prive" value="prive">
+            <label for="prive">Citoyen du secteur privé</label>
+        </div>
+
+        <button onclick="calculerSalaire()">Calculer mon Salaire</button>
+
+        <div class="results">
+            <h3>Résultats :</h3>
+            <p><strong>Salaire brut (en patates et Cœurs de la Mer) :</strong> <span id="salaireBrut">-</span></p>
+            <p><strong>Salaire net (après taxes) :</strong> <span id="salaireNet">-</span></p>
+        </div>
+    </div>
+
+    <script>
+        function calculerSalaire() {
+            let d = parseFloat(document.getElementById('diamants').value) || 0;
+            let n = parseFloat(document.getElementById('netherite').value) || 0;
+            let e = parseFloat(document.getElementById('emeraudes').value) || 0;
+            let f = parseFloat(document.getElementById('fer').value) || 0;
+            let o = parseFloat(document.getElementById('or').value) || 0;
+
+            // Valeur brute (en patates empoisonnées)
+            let salairePatates = (n * 45) + (d * 5) + (e * 1) + (f * 0.1) + (o * 0.5);
+
+            // Retenue netherite (1 de retenue pour chaque tranche de 10 au-delà de 10)
+            let nRet = 0;
+            if (n > 10) {
+                nRet = Math.floor((n - 1) / 10);
+            }
+
+            // Taxes dynamiques (limitées à 1/5 ou 1/4 selon le cas)
+            let dBonus = Math.floor((d / 2) / d) * 0.02 || 0;
+            let dRet = Math.min(d * (0.07 + dBonus), d * 0.2);
+
+            let eBonus = Math.floor((e / 2) / e) * 0.03 || 0;
+            let eRet = Math.min(e * (0.10 + eBonus), e * 0.2);
+
+            let fBonus = Math.floor((f / 2) / f) * 0.03 || 0;
+            let fRet = Math.min(f * (0.10 + fBonus), f * 0.25);
+
+            let oBonus = Math.floor((o / 2) / o) * 0.02 || 0;
+            let oRet = Math.min(o * (0.10 + oBonus), o * 0.25);
+
+            // Total retenue (convertie en patates)
+            let totalRetenue = (nRet * 45) + (dRet * 5) + (eRet * 1) + (fRet * 0.1) + (oRet * 0.5);
+
+            // Taxes supplémentaires
+            let baseTaxe = document.getElementById('prive').checked ? 2.7 : 1.5;
+            let taxeTotalePourcent = baseTaxe + 3.2;
+            let taxeFinale = (salairePatates - totalRetenue) * (taxeTotalePourcent / 100);
+
+            // Salaire net
+            let salaireNet = salairePatates - totalRetenue - taxeFinale;
+
+            // Conversion en Cœurs de la Mer + Patates restantes
+            let coeursDeLaMerBrut = Math.floor(salairePatates / 75);
+            let restePatatesBrut = salairePatates % 75;
+
+            let coeursDeLaMerNet = Math.floor(salaireNet / 75);
+            let restePatatesNet = salaireNet % 75;
+
+            // Affichage
+            document.getElementById('salaireBrut').textContent = coeursDeLaMerBrut + " 🧡 et " + restePatatesBrut.toFixed(2) + ' 🥔 empoisonnées';
+            document.getElementById('salaireNet').textContent = coeursDeLaMerNet + " 🧡 et " + restePatatesNet.toFixed(2) + ' 🥔 empoisonnées';
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>République de Blocaria – Lois Officielles</title>
+    <meta name="description" content="Téléchargement des lois officielles de la République de Blocaria">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'MedievalSharp', cursive;
+            margin: 0;
+            padding: 0;
+            color: #f2e2b3;
+            background: url('Cite-des-elements-1.png') no-repeat center center fixed;
+            background-size: cover;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #9c6a3c;
+            margin-bottom: 40px;
+        }
+
+            header h1 {
+                font-size: 3.5em;
+                color: #9c6a3c;
+                margin: 0;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            }
+        /* Menu de navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            border-top: 2px solid #9c6a3c;
+        }
+
+            nav a {
+                color: #f2e2b3;
+                text-decoration: none;
+                margin: 0 25px;
+                font-size: 1.3em;
+                text-transform: uppercase;
+            }
+
+                nav a:hover {
+                    color: #9c6a3c;
+                    text-decoration: underline;
+                }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.75);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ffeb9c;
+        }
+
+        .speech {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-left: 5px solid #d4af37;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            color: #fdf5c9;
+        }
+
+        label {
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+            color: #fff3c2;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #f4f4f4;
+            color: #000;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            background-color: #d4af37;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+            button:hover {
+                background-color: #bfa02f;
+            }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>République de Blocaria</h1>
+    </header>
+    <nav>
+        <a href="ind.html">Page Principal</a>
+        <a href="activité.html">lieu important</a>
+        <a href="site patate.html">calculateur de salaire</a>
+    </nav>
+    <div class="container">
+        <h2>Lois Officielles De Blocaria</h2>
+
+        <div class="speech">
+            <p>
+                Les lois présentes ici sont le fruit de débats et de votes au sein du Sénat de la République.
+                Elles reflètent la volonté collective de garantir l'ordre, la sécurité et l'organisation interne.
+                Notez que toutes les lois existantes ne sont pas forcément recensées ici : certaines peuvent être encore en rédaction ou en attente de validation.
+            </p>
+        </div>
+
+        <label for="tomeSelect">Choisissez un tome à télécharger :</label>
+        <select id="tomeSelect">
+            <option value="">-- Sélectionnez un tome --</option>
+            <option value="Tome1_Le_respect_interieur.docx">Tome 1 – Le respect intérieur</option>
+            <option value="Tome2_L_exploitation_des_ressources.docx">Tome 2 – L’exploitation des ressources</option>
+            <option value="Tome3_Diplomatie_et_securite.docx">Tome 3 – Diplomatie et crises</option>
+            <option value="Tome4_Ordre_Sécurité_et_Défence.docx">Tome 4 - Ordre, Sécurité et Défense</option>
+            <option value="Tome5_La_ Justice_et_le_Système_Judiciaire_Républicain.docx">Tome 5 - La justice et le sutème judicaire</option>
+        </select>
+
+        <button onclick="telechargerTome()">Télécharger</button>
+
+        <!-- SECTION PORTER PLAINTE -->
+        <h2>Porter plainte</h2>
+        <div class="speech">
+            <p>
+                Si vous souhaitez porter plainte, veuillez cliquer sur le bouton ci-dessous pour accéder au formulaire officiel.
+                Votre démarche sera prise en compte avec toute l’attention requise par les autorités de la République de Blocaria.
+            </p>
+        </div>
+        <div style="text-align: center; margin-bottom: 40px;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSewNK2PiGL4jS0iNkdggMpPgjTyHt4CbtfaXGd6sKlX-MQgIg/viewform?usp=header" target="_blank"
+               style="background-color: #d4af37; color: #000; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+                Accéder au formulaire de plainte
+            </a>
+        </div>
+
+        <h2>Membres du Sénat</h2>
+        <div class="speech">
+            <p>
+                Le Sénat de la République de Blocaria est une institution souveraine composée de membres élus ou reconnus
+                pour leur engagement, leur sagesse et leur contribution à la stabilité de la nation. Chaque sénateur
+                participe activement à la rédaction, à la délibération et à l’adoption des lois officielles. ce sont les seules juges de blocaria
+            </p>
+        </div>
+
+        <ul style="list-style-type: none; padding-left: 0; font-size: 1.2rem; color: #ffeb9c; text-align: center;">
+            <li><strong>• Enoe_one</strong> – Président du Sénat</li>
+            <li><strong>• Moselle</strong> – Sénateur</li>
+            <li><strong>• Tankman____</strong> – Sénateur</li>
+        </ul>
+    </div>
+
+        <!-- ... (le reste de ton code comme footer etc.) -->
+
+        <footer>
+            République de Blocaria – Service législatif officiel
+        </footer>
+    </div>
+
+    <script>
+        function telechargerTome() {
+            const select = document.getElementById("tomeSelect");
+            const fichier = select.value;
+            if (fichier) {
+                window.location.href = fichier;
+            } else {
+                alert("Veuillez sélectionner un tome à télécharger.");
+            }
+        }
+    </script>
+
+</body>
+</html>

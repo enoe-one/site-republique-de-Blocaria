@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre d'activités de Blocaria</title>
+    <meta name="description" content="Bienvenue sur le centre des activités de Blocaria, avec des liens vers l'aéroport, le port, la justice, la cité et l'auberge.">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+    <style>
+        /* Corps de la page */
+        body {
+            font-family: 'MedievalSharp', cursive;
+            margin: 0;
+            padding: 0;
+            color: #f2e2b3;
+            background: url('Cite-des-elements-1.png') no-repeat center center fixed;
+            background-size: cover;
+            scroll-behavior: smooth;
+        }
+
+        /* En-tête avec logo et titre */
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #9c6a3c;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            color: #9c6a3c;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Menu de navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            border-top: 2px solid #9c6a3c;
+        }
+
+        nav a {
+            color: #f2e2b3;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #9c6a3c;
+            text-decoration: underline;
+        }
+
+        /* Conteneur principal */
+        .container {
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 30px auto;
+            max-width: 900px;
+            border-radius: 15px;
+            border: 2px solid #9c6a3c;
+        }
+
+        .container h2 {
+            font-size: 2.5em;
+            color: #9c6a3c;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .container p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+
+        /* Boutons d'action */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #9c6a3c;
+            color: #f2e2b3;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #7a4e2f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: #f2e2b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>Centre d'activités de Blocaria</h1>
+    </header>
+
+    <!-- Menu de navigation -->
+    <nav>
+        <a href="ind.html">page principal</a>
+        <a href="site patate.html">calculateur de salaire</a>
+        <a href="JUSTICE.html">justice de blocaria</a>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container" id="aeroport">
+        <h2>L'Aéroport de Blocaria</h2>
+        <p>
+            L'aéroport est un lieu stratégique où arrivent et partent les voyageurs du monde entier. Il est relié à toutes les grandes cités et permet de découvrir la grandeur de Blocaria sous un autre angle.
+        </p>
+        <a href="https://enoe-one.github.io/aeroport-du-grand-canal/" class="btn" target="_blank">Visiter l'Aéroport</a>
+    </div>
+
+    <div class="container" id="port">
+        <h2>Le Port de Blocaria</h2>
+        <p>
+            Le port est en construction et sera bientôt prêt à accueillir les navires marchands et voyageurs de tous horizons. C'est une porte ouverte sur le monde extérieur.
+        </p>
+        <a href="#" class="btn">Port - À venir</a>
+    </div>
+    <div class="container" id="cite">
+        <h2>La Cité de Blocaria</h2>
+        <p>
+            Découvrez l'histoire et la culture de la République de Blocaria sur notre site officiel de la cité. Nous vous dévoilons les traditions et le quotidien de notre grand peuple.
+        </p>
+        <a href="#" class="btn">Cité - À venir</a>
+    </div>
+
+    <div class="container" id="auberge">
+        <h2>L'Auberge de Blocaria</h2>
+        <p>
+            L'auberge de Blocaria est un lieu de rencontre et de repos pour les voyageurs. Bientôt, vous pourrez réserver votre place et découvrir les spécialités culinaires de la cité.
+        </p>
+        <a href="#" class="btn">Auberge - À venir</a>
+    </div>
+
+</body>
+</html>
